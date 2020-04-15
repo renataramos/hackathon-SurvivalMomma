@@ -27,14 +27,13 @@ public class User extends AbstractModel {
     @OneToMany(
             cascade = {CascadeType.ALL},
             orphanRemoval = true,
-            mappedBy = "user",
-            fetch = FetchType.LAZY
+            mappedBy = "user"
     )
     private List<Video> videos = new ArrayList<>();
 
     public void addVideo(Video video) {
         videos.add(video);
-        video.setUserAuthor(this); //if it doesn't work, change order
+        video.setUser(this); //if it doesn't work, change order
     }
 
     public void addLesson(Lesson lesson){
@@ -44,7 +43,7 @@ public class User extends AbstractModel {
 
     public void removeVideo(Video video){
         videos.remove(video);
-        video.setUserAuthor(null);
+        video.setUser(null);
     }
 
     public String getFirstName() {
