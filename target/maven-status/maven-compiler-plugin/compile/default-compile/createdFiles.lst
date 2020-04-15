@@ -1,1 +1,15 @@
-org/academiadecodigo/rhashtafaris/kakathon/controllers/TestController.class
+org\academiadecodigo\rhashtafaris\kakathon\Main.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Lesson.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Challenge.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaLessonDao.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\Dao.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaVideoDao.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaUserDao.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaChallengeDao.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Model.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Video.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\model\AbstractModel.class
+org\academiadecodigo\rhashtafaris\kakathon\controllers\TestController.class
+org\academiadecodigo\rhashtafaris\kakathon\dto\dto.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\GenericJpaDao.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\model\User.class
