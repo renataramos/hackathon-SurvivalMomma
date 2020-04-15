@@ -87,7 +87,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Video addVideo(Integer id, Video video) throws UserNotFoundException, VideoNotFoundException {
 
-        User user = userDao.getById(id);
+        User user = userDao.findById(id);
 
         if (user == null) {
             throw new UserNotFoundException();

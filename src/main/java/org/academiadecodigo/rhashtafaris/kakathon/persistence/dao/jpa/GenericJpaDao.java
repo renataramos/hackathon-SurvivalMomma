@@ -6,9 +6,12 @@ import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
-public abstract class GenericJpaDao<T extends Model> implements Dao <T> {
+public abstract class GenericJpaDao<T extends Model> {
 
     protected Class<T> modelType;
 
@@ -27,15 +30,22 @@ public abstract class GenericJpaDao<T extends Model> implements Dao <T> {
         this.em = em;
     }
 
-    public abstract T findById(Integer id);
+    public T findById(Integer id){
+        return em.find(modelType, id);
+    }
 
-    public abstract void delete(Integer id);
+    public void delete(Integer id){
+        em.remove(em.find(modelType, id));
+    }
 
-    public abstract List<T> findAll();
+    public List<T> findAll(){
+        CriteriaQuery<T> criteriaQuery = em.getCriteriaBuilder().createQuery(modelType);
+        Root<T> root = criteriaQuery.from(modelType);
+        return em.createQuery(criteriaQuery).getResultList();
+    }
 
-    public abstract T getById(Integer id);
 
-    public abstract T findByEmail(String email);
-
-    public abstract T saveOrUpdate(User user);
+    public T saveOrUpdate(T model){
+        return em.merge(model);
+    }
 }

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public class JpaVideoDao extends GenericJpaDao<Video>  {
+public class JpaVideoDao extends GenericJpaDao<Video>   {
 
     public JpaVideoDao() {
         super(Video.class);

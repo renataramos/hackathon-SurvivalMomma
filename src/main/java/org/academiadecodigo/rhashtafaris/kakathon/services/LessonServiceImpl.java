@@ -19,6 +19,6 @@ public class LessonServiceImpl implements LessonService{
     @Transactional(readOnly = true)
     @Override
     public Lesson get(Integer id) {
-        return lessonDao.getById(id);
+        return lessonDao.findById(id);
     }
 }
