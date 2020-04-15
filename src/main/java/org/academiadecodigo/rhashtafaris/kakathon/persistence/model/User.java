@@ -24,13 +24,28 @@ public class User extends AbstractModel {
     )
     private List<Lesson> lessons = new ArrayList<>();
 
-    /*@OneToMany(
+    @OneToMany(
             cascade = {CascadeType.ALL},
             orphanRemoval = true,
             mappedBy = "user",
-            fetch = FetchType.EAGER
+            fetch = FetchType.LAZY
     )
-    private List<Video> videos = new ArrayList<>();*/
+    private List<Video> videos = new ArrayList<>();
+
+    public void addVideo(Video video) {
+        videos.add(video);
+        video.setUserAuthor(this); //if it doesn't work, change order
+    }
+
+    public void addLesson(Lesson lesson){
+        lessons.add(lesson);
+        lesson.setUser(this);
+    }
+
+    public void removeVideo(Video video){
+        videos.remove(video);
+        video.setUserAuthor(null);
+    }
 
     public String getFirstName() {
         return firstName;
@@ -96,11 +111,12 @@ public class User extends AbstractModel {
         this.lessons = lessons;
     }
 
-    /*public List<Video> getVideos() {
+
+    public List<Video> getVideos() {
         return videos;
     }
 
     public void setVideos(List<Video> videos) {
         this.videos = videos;
-    }*/
+    }
 }

@@ -1,5 +1,12 @@
 package org.academiadecodigo.rhashtafaris.kakathon.services;
 
+import org.academiadecodigo.rhashtafaris.kakathon.exceptions.UserNotFoundException;
+import org.academiadecodigo.rhashtafaris.kakathon.exceptions.VideoNotFoundException;
+import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.User;
+import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Video;
+
+import java.util.List;
+
 public interface UserService {
 
     User get(Integer id);
@@ -8,10 +15,13 @@ public interface UserService {
 
     User save(User user);
 
-    void delete(Integer id);
+    void delete(Integer id)  throws UserNotFoundException;
 
     List<User> listUsers();
 
-    List<Video> listVideos(Integer id);
+    Video addVideo(Integer id, Video video) throws UserNotFoundException, VideoNotFoundException;
 
+    void removeVideo(Integer id, Integer videoId) throws VideoNotFoundException, UserNotFoundException;
+
+    //List<Video> listVideos(Integer id);
 }

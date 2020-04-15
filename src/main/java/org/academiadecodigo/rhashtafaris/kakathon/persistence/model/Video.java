@@ -10,8 +10,8 @@ public class Video extends AbstractModel {
 
     private String path;
 
-    /*@ManyToOne
-    private User userAuthor;*/
+    @ManyToOne
+    private User userAuthor;
 
     public String getPath() {
         return path;
@@ -21,11 +21,11 @@ public class Video extends AbstractModel {
         this.path = path;
     }
 
-    /*public User getUserAuthor() {
+    public User getUserAuthor() {
         return userAuthor;
     }
 
     public void setUserAuthor(User userAuthor) {
         this.userAuthor = userAuthor;
-    }*/
+    }
 }

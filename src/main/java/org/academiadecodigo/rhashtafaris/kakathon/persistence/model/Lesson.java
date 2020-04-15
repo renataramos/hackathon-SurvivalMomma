@@ -38,4 +38,12 @@ public class Lesson extends AbstractModel {
     public void setChallenge(Challenge challenge) {
         this.challenge = challenge;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
