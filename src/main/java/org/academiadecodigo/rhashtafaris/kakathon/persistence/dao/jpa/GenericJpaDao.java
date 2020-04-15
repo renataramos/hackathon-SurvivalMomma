@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
-public abstract class GenericJpaDao<T extends Model> implements Dao {
+public abstract class GenericJpaDao<T extends Model> implements Dao <T> {
 
     protected Class<T> modelType;
 
