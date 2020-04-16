@@ -1,14 +1,16 @@
 package org.academiadecodigo.rhashtafaris.kakathon.persistence.model;
 
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "challenges")
-public class Challenge extends AbstractModel {
+//@Entity
+//@Table(name = "challenges")
+@Embeddable
+//public class Challenge extends AbstractModel {
+    public class Challenge  {
 
-    private String title;
     private String question;
 
     private String option1;
@@ -16,16 +18,8 @@ public class Challenge extends AbstractModel {
     private String option3;
     private String option4;
 
-    @OneToOne
-    private User lesson;
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    //@OneToOne
+    //private User lesson;
 
     public String getQuestion() {
         return question;
@@ -67,11 +61,11 @@ public class Challenge extends AbstractModel {
         this.option4 = option4;
     }
 
-    public User getLesson() {
+    /*public User getLesson() {
         return lesson;
     }
 
     public void setLesson(User lesson) {
         this.lesson = lesson;
-    }
+    }*/
 }

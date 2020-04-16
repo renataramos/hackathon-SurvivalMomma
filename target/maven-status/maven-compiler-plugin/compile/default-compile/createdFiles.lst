@@ -5,14 +5,12 @@ org\academiadecodigo\rhashtafaris\kakathon\services\LessonServiceImpl.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaLessonDao.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\Dao.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaVideoDao.class
-org\academiadecodigo\rhashtafaris\kakathon\services\ChallengeService.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaUserDao.class
 org\academiadecodigo\rhashtafaris\kakathon\services\VideoServiceImpl.class
 org\academiadecodigo\rhashtafaris\kakathon\Main.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Challenge.class
 org\academiadecodigo\rhashtafaris\kakathon\services\LessonService.class
 org\academiadecodigo\rhashtafaris\kakathon\exceptions\UserNotFoundException.class
-org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaChallengeDao.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Model.class
 org\academiadecodigo\rhashtafaris\kakathon\exceptions\SurvivorException.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Video.class
@@ -24,4 +22,3 @@ org\academiadecodigo\rhashtafaris\kakathon\services\VideoService.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\GenericJpaDao.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\model\User.class
 org\academiadecodigo\rhashtafaris\kakathon\errors\ErrorMessage.class
-org\academiadecodigo\rhashtafaris\kakathon\services\ChallengeServiceImpl.class

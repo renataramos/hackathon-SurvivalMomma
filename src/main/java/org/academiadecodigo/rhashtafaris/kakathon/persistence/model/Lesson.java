@@ -9,7 +9,8 @@ public class Lesson extends AbstractModel {
     private String title;
     private String pathImage;
 
-    @OneToOne
+    //@OneToOne
+    @Embedded
     private Challenge challenge;
 
     @ManyToOne
