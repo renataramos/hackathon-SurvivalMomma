@@ -11,6 +11,7 @@ org\academiadecodigo\rhashtafaris\kakathon\converters\DtoToLesson.class
 org\academiadecodigo\rhashtafaris\kakathon\converters\DtoToVideo.class
 org\academiadecodigo\rhashtafaris\kakathon\converters\AbstractConverter.class
 org\academiadecodigo\rhashtafaris\kakathon\services\VideoServiceImpl.class
+org\academiadecodigo\rhashtafaris\kakathon\controllers\UserController.class
 org\academiadecodigo\rhashtafaris\kakathon\converters\LessonToDto.class
 org\academiadecodigo\rhashtafaris\kakathon\dto\LessonDto.class
 org\academiadecodigo\rhashtafaris\kakathon\Main.class

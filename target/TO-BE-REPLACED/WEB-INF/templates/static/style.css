@@ -1,20 +1,15 @@
-html {
-    height: 100%;
-}
-
 body {
     margin: 0 auto;
-    height: 100%;
     text-align: center;
 }
 
 .headerContainer {
-    display: flex !important;
-    height: 100%;
+    display: flex;
+    min-height: 100vh;
 }
 
 header {
-    align-items: center !important;
+    align-items: center;
     background-color: rgba(43, 105, 61, 0.562);
     display: flex !important;
     width: 60%;
@@ -103,6 +98,10 @@ form {
     padding-left: 10px;
 }
 
+input .birthDate {
+    font-family: monospace;
+}
+
 /* SIGN UP */
 
 .personTypeContainer {
@@ -120,32 +119,11 @@ form {
     width: auto;
 }
 
-.select2-container--default .select2-selection--multiple {
-    border-radius: 10px !important;
-    height: 40px;
-}
+/* INITIAL PAGE */
 
-.select2-container--default.select2-container--focus
-    .select2-selection--multiple {
-    border: 1px solid rgba(43, 105, 61, 0.562);
-}
-
-.select2-container--default .select2-search--inline .select2-search__field {
-    font-family: monospace;
-    font-family: 14px;
-}
-
-.select2-container--default
-    .select2-selection--multiple
-    .select2-selection__rendered {
-    font-family: monospace;
-}
-
-.select2-container--default
-    .select2-selection--multiple
-    .select2-selection__rendered
-    li {
-    font-family: monospace;
+#header {
+    height: 20%;
+    width: 100%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -154,8 +132,9 @@ form {
     }
 
     header {
-        height: 50%;
+        height: 50vh;
         width: 100%;
+        margin-bottom: 30px;
     }
 
     header h1 {
@@ -167,11 +146,35 @@ form {
     .formContainer {
         height: 50%;
         width: 100%;
+        margin-bottom: 30px;
     }
 }
 
 @media only screen and (max-width: 540px) {
     header h1 {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .login {
+        font-size: 16px;
+    }
+
+    .input,
+    .btn {
+        width: 100%;
+    }
+
+    .formContainer {
+        font-size: 12px;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    .signUp {
+        margin: 20px 0 10px 0;
     }
 }
