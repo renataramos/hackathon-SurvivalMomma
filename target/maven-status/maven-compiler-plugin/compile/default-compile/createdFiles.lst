@@ -9,6 +9,7 @@ org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaUserDao.class
 org\academiadecodigo\rhashtafaris\kakathon\converters\AbstractConverter.class
 org\academiadecodigo\rhashtafaris\kakathon\services\VideoServiceImpl.class
 org\academiadecodigo\rhashtafaris\kakathon\Main.class
+org\academiadecodigo\rhashtafaris\kakathon\controllers\MainController.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Challenge.class
 org\academiadecodigo\rhashtafaris\kakathon\services\LessonService.class
 org\academiadecodigo\rhashtafaris\kakathon\exceptions\UserNotFoundException.class

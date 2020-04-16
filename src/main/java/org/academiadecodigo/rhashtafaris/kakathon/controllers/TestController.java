@@ -31,7 +31,7 @@ public class TestController {
         this.userDtoToUser = userDtoToUser;
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = {"/", ""})
+    @RequestMapping(method = RequestMethod.GET, path = {"/test"})
     public ModelAndView userList () {
 
         //model.addAttribute("user", userService.listUsers());
