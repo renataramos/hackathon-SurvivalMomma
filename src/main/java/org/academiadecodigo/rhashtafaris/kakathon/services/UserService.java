@@ -9,9 +9,9 @@ import java.util.List;
 
 public interface UserService {
 
-    User get(Integer id);
+    User get(Integer id) throws UserNotFoundException;
 
-    User get(String email);
+    User get(String email) throws UserNotFoundException;
 
     User save(User user);
 

@@ -2,7 +2,9 @@ package org.academiadecodigo.rhashtafaris.kakathon.converters;
 
 import org.academiadecodigo.rhashtafaris.kakathon.dto.VideoDto;
 import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Video;
+import org.springframework.stereotype.Component;
 
+@Component
 public class VideoToDto extends AbstractConverter<Video, VideoDto> {
 
     @Override

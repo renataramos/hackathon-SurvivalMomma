@@ -29,16 +29,29 @@ public class UserServiceImpl implements UserService {
         this.videoDao = videoDao;
     }
 
-
     @Transactional (readOnly = true)
     @Override
-    public User get(Integer id) {
+    public User get(Integer id) throws UserNotFoundException {
+
+        User user = userDao.findById(id);
+
+        if (user == null) {
+            throw new UserNotFoundException();
+        }
+
         return userDao.findById(id);
     }
 
     @Transactional (readOnly = true)
     @Override
-    public User get(String email) {
+    public User get(String email) throws UserNotFoundException{
+
+        User user = userDao.findByEmail(email);
+
+        if (user == null) {
+            throw new UserNotFoundException();
+        }
+
         return userDao.findByEmail(email);
     }
 

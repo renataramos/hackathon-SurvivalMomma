@@ -4,7 +4,9 @@ import org.academiadecodigo.rhashtafaris.kakathon.dto.LessonDto;
 import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Lesson;
 import org.academiadecodigo.rhashtafaris.kakathon.services.LessonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DtoToLesson extends AbstractConverter<LessonDto, Lesson> {
 
     private LessonService lessonService;

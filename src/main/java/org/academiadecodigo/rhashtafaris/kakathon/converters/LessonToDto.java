@@ -2,7 +2,9 @@ package org.academiadecodigo.rhashtafaris.kakathon.converters;
 
 import org.academiadecodigo.rhashtafaris.kakathon.dto.LessonDto;
 import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Lesson;
+import org.springframework.stereotype.Component;
 
+@Component
 public class LessonToDto extends AbstractConverter<Lesson, LessonDto> {
 
     @Override

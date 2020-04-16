@@ -4,7 +4,9 @@ import org.academiadecodigo.rhashtafaris.kakathon.dto.VideoDto;
 import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Video;
 import org.academiadecodigo.rhashtafaris.kakathon.services.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DtoToVideo extends AbstractConverter<VideoDto, Video> {
 
     private VideoService videoService;
