@@ -19,14 +19,6 @@ public class User extends AbstractModel {
     @OneToMany(
             cascade = {CascadeType.ALL},
             orphanRemoval = true,
-            mappedBy = "user",
-            fetch = FetchType.EAGER
-    )
-    private List<Lesson> lessons = new ArrayList<>();
-
-    @OneToMany(
-            cascade = {CascadeType.ALL},
-            orphanRemoval = true,
             mappedBy = "user"
     )
     private List<Video> videos = new ArrayList<>();
@@ -34,11 +26,6 @@ public class User extends AbstractModel {
     public void addVideo(Video video) {
         videos.add(video);
         video.setUser(this); //if it doesn't work, change order
-    }
-
-    public void addLesson(Lesson lesson){
-        lessons.add(lesson);
-        lesson.setUser(this);
     }
 
     public void removeVideo(Video video){
@@ -101,15 +88,6 @@ public class User extends AbstractModel {
     public void setRanking(Integer ranking) {
         this.ranking = ranking;
     }
-
-    public List<Lesson> getLessons() {
-        return lessons;
-    }
-
-    public void setLessons(List<Lesson> lessons) {
-        this.lessons = lessons;
-    }
-
 
     public List<Video> getVideos() {
         return videos;
