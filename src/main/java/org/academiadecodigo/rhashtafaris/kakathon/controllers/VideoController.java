@@ -2,19 +2,16 @@ package org.academiadecodigo.rhashtafaris.kakathon.controllers;
 
 import org.academiadecodigo.rhashtafaris.kakathon.converters.VideoToDto;
 import org.academiadecodigo.rhashtafaris.kakathon.dto.VideoDto;
+import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Model;
 import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Video;
 import org.academiadecodigo.rhashtafaris.kakathon.services.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
-@RequestMapping("/user/videos")
 public class VideoController {
 
     private VideoService videoService;
@@ -30,8 +27,13 @@ public class VideoController {
         this.videoToDto = videoToDto;
     }
 
-    @GetMapping("/")
-    public ModelAndView showVideos() {
+    @GetMapping("/video")
+    public String showVideos() {
+
+        return "video";
+
+    }
+    /*public ModelAndView showVideos() {
 
         List<VideoDto> videos = new ArrayList<>();
 
@@ -41,6 +43,8 @@ public class VideoController {
             videos.add(videoDto);
         }
 
-        return new ModelAndView("videos-list", "videoList", videos);
+        return new ModelAndView("videos", "videoList", videos);
     }
+    */
+
 }

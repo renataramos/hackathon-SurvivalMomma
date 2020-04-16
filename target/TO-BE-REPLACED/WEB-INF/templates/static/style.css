@@ -221,7 +221,10 @@ input .birthDate {
     Videos Page
 -----------------------------------------------------------*/
 
-
 #video {
     margin-bottom: 2rem;
+}
+
+#quiz {
+    padding-top: 3rem;
 }
