@@ -44,7 +44,6 @@ public abstract class GenericJpaDao<T extends Model> {
         return em.createQuery(criteriaQuery).getResultList();
     }
 
-
     public T saveOrUpdate(T model){
         return em.merge(model);
     }
