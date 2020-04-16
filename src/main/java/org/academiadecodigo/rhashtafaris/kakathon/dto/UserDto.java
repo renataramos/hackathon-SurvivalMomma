@@ -24,6 +24,16 @@ public class UserDto {
     @Size(min = 9, max = 16)
     private String phone;
 
+    private Integer ranking;
+
+    public Integer getRanking() {
+        return ranking;
+    }
+
+    public void setRanking(Integer ranking) {
+        this.ranking = ranking;
+    }
+
     public Integer getId() {
         return id;
     }
