@@ -8,6 +8,9 @@
         <property name="locations" value="classpath:kakathon.properties"/>
     </bean>
 
+    <!-- Static Resources -->
+    <mvc:resources mapping="/static/**" location="WEB-INF/templates/static/"/>
+
     <!-- Use spring servlet for all requests, including static resources -->
     <mvc:default-servlet-handler/>
 
