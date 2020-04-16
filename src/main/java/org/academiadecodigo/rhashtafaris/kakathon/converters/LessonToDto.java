@@ -14,6 +14,7 @@ public class LessonToDto extends AbstractConverter<Lesson, LessonDto> {
         lessonDto.setId(lesson.getId());
         lessonDto.setPathImage(lesson.getPathImage());
         lessonDto.setTitle(lesson.getTitle());
+        lessonDto.setChallenge(lesson.getChallenge());
 
         return lessonDto;
     }

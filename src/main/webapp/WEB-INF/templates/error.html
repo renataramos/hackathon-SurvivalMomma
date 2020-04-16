@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <thymeleaf th:replace="header :: header" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error">
+                <h1>Oops!</h1>
+                <div class="error-details">
+                    <h1>Error Status: </h1>
+                    <h4 th:text="${request}"></h4>
+                </div>
+
+                <div id="map" class="col-sm-9">
+                    <img src="/static/big_momma_alias.png" class="img-fluid" style="width: 30%; padding: 20px;">
+                </div>
+
+                <div class="error-details">
+                    Sorry, the following error occured: <h4 th:text="${exception}"></h4>
+                </div>
+
+                <div class="error-actions">
+                    <a href="/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>HOME</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

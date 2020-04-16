@@ -7,7 +7,7 @@
 <body>
 <div>
     <header id="header">
-        <h1>big momma here</h1>
+        <img src="/static/header3.png" class="img-fluid">
     </header>
 
     <div id="map-container" class="container">
@@ -19,30 +19,40 @@
             </div>
         </div>
 
-
         <div class="row">
 
             <div id="map" class="col-sm-9">
-                <img src="../static/map.png" class="img-fluid">
+                <th:block th:if="(${user.ranking} < 10)">
+                    <img src="../static/map.png" class="img-fluid">
+                </th:block>
+
+                <th:block th:if="(${user.ranking} >= 10 and ${user.ranking} < 20)">
+                    <img src="../static/map_01.png" class="img-fluid">
+                </th:block>
+
+                <th:block th:if="(${user.ranking} >= 20 and ${user.ranking} < 100)">
+                    <img src="../static/map_02.png" class="img-fluid">
+                </th:block>
             </div>
 
             <div id="badge" class="col-sm-3">
                 <div><h3 th:text="${user.firstName}"></h3></div>
 
-                <th:block th:switch="${user.ge}">
-                    <div th:case="'COMPLETE'">
-                        <!-- print object is not active -->
-                    </div>
-                    <div th:case="'INVALID'">
-                        <!-- print object is not active -->
-                    </div>
-                    <div th:case="'NEW'">
-                        <!-- print object is new and active -->
-                    </div>
+                <th:block th:if="(${user.ranking} < 10)">
+                    <img src="../static/badge1.png" class="img-fluid">
+                    <a th:href="@{'/lesson/1/user=' + ${user.id}}" ><button class="btn">Next Lesson</button></a>
                 </th:block>
 
-                <img src="../static/badge1.png" class="img-fluid">
-                <button class="btn">Next Lesson</button>
+                <th:block th:if="(${user.ranking} >= 10 and ${user.ranking} < 20)">
+                    <img src="../static/badge2.png" class="img-fluid">
+                    <a th:href="@{'/lesson/2/user=' + ${user.id}}" ><button class="btn">Next Lesson</button></a>
+                </th:block>
+
+                <th:block th:if="(${user.ranking} >= 20 and ${user.ranking} < 100)">
+                    <img src="../static/badge3.png" class="img-fluid">
+                    <a th:href="@{'/lesson/3/user=' + ${user.id}}" ><button class="btn">Next Lesson</button></a>
+                </th:block>
+
                 <button class="btn">Submit Video</button>
                 <button class="btn">All Videos</button>
                 <button class="btn">Top 10 Survivor</button>

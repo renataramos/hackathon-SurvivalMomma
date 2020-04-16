@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <thymeleaf th:replace="header :: header" />
+</head>
+
+<body>
+<div>
+    <header id="header">
+        <img src="/static/header3.png" class="img-fluid">
+    </header>
+
+    <div id="map-container" class="container">
+
+        <div class="row">
+            <div id="tip" class="col-sm">
+                <h2>Tip of the day</h2>
+                <h4>You can use it to purify water, cook food, ward off predators, cauterize wounds, and even signal for help.</h4>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div id="map" class="col-sm-9">
+                <img src="/static/lesson1.png" class="img-fluid">
+            </div>
+
+            <div id="quiz" class="col-sm-3">
+                <div><h3 th:text="${lessonDto.challenge.getQuestion()}"></h3></div>
+                <div>
+                    <form th:object="${userDto}" th:action="@{'/lesson/quiz'}" method="post">
+                        <input type="radio" id="option1" name="lesson1" value="A">
+                        <label th:text="${lessonDto.challenge.getOption1()}" for="option1"></label><br>
+                        <input type="radio" id="option2" name="lesson1" value="B">
+                        <label th:text="${lessonDto.challenge.getOption2()}" for="option2"></label><br>
+                        <input type="radio" id="option3" name="lesson1" value="C">
+                        <label th:text="${lessonDto.challenge.getOption3()}" for="option3"></label>
+                        <input type="radio" id="option4" name="lesson1" value="D">
+                        <label th:text="${lessonDto.challenge.getOption4()}" for="option4"></label>
+                        <button type="submit" class="btn btn-primary" name="action" value="save">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -12,9 +12,7 @@ import org.academiadecodigo.rhashtafaris.kakathon.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/lesson")
@@ -92,14 +90,14 @@ public class LessonController {
         return "lesson-three";
     }
 
-    @PostMapping("/{id}/quizz")
+    @PostMapping("/quiz")
     public String addQuizzResult(@ModelAttribute UserDto userDto) throws UserNotFoundException{
 
         User user = userDtoToUser.convert(userDto);
 
-        user.setRanking(user.getRanking() + POINTS_FOR_WINNING_QUIZZ);
+        //user.setRanking(user.getRanking() + POINTS_FOR_WINNING_QUIZZ);
 
-        userService.save(user);
+        //userService.save(user);
 
         return "redirect:/user/show/" + user.getId();
     }
