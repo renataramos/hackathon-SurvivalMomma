@@ -30,5 +30,4 @@ public class VideoServiceImpl implements VideoService {
         return videoDao.findAll();
     }
 
-
 }
