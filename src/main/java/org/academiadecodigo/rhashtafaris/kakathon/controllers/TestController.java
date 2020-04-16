@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("api/customer")
 public class TestController {
 
     private UserService userService;
@@ -43,10 +42,10 @@ public class TestController {
     }
 
     @GetMapping("/")
-    public String userList (Model model) {
+    public ModelAndView userList () {
 
-        model.addAttribute("user", userService.listUsers());
+        //model.addAttribute("user", userService.listUsers());
 
-        return "test";
+        return new ModelAndView("test");
     }
 }
