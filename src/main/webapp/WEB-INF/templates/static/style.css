@@ -9,14 +9,14 @@ body {
 }
 
 .headerContainer {
-    display: flex;
+    display: flex !important;
     height: 100%;
 }
 
 header {
-    align-items: center;
+    align-items: center !important;
     background-color: rgba(43, 105, 61, 0.562);
-    display: flex;
+    display: flex !important;
     width: 60%;
     justify-content: center;
 }
@@ -70,21 +70,21 @@ form {
 }
 
 .btn {
-    align-items: center;
-    background-color: rgba(43, 105, 61, 0.562);
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    font-size: 14px;
-    font-weight: bold;
-    justify-content: center;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    align-items: center !important;
+    background-color: rgba(43, 105, 61, 0.562) !important;
+    border: none !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    display: flex !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    justify-content: center !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
 }
 
 .btn:hover {
-    background-color: rgba(19, 48, 27, 0.795);
+    background-color: rgba(19, 48, 27, 0.795) !important;
 }
 
 .input,

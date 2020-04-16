@@ -10,4 +10,9 @@ public class MainController {
     public String home() {
         return "index";
     }
+
+    @RequestMapping("/signup")
+    public String signUp() {
+        return "signup";
+    }
 }
