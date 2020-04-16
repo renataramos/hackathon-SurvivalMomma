@@ -10,6 +10,7 @@ C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rha
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\Main.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\Dao.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\controllers\TestController.java
+C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\exceptions\GlobalExceptionHandler.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Challenge.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\services\LessonServiceImpl.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\converters\UserDtoToUser.java
@@ -24,10 +25,12 @@ C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rha
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\services\LessonService.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\persistence\model\AbstractModel.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\exceptions\VideoNotFoundException.java
+C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\controllers\VideoController.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\GenericJpaDao.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Model.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\services\UserService.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\services\UserServiceImpl.java
+C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\controllers\LessonController.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\services\VideoServiceImpl.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\exceptions\SurvivorException.java
 C:\Users\lusco\OneDrive\Academia\kakathon\src\main\java\org\academiadecodigo\rhashtafaris\kakathon\controllers\UserController.java

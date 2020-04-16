@@ -4,6 +4,7 @@ org\academiadecodigo\rhashtafaris\kakathon\services\UserService.class
 org\academiadecodigo\rhashtafaris\kakathon\services\LessonServiceImpl.class
 org\academiadecodigo\rhashtafaris\kakathon\converters\VideoToDto.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaLessonDao.class
+org\academiadecodigo\rhashtafaris\kakathon\controllers\VideoController.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\Dao.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaVideoDao.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\JpaUserDao.class
@@ -25,6 +26,7 @@ org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Model.class
 org\academiadecodigo\rhashtafaris\kakathon\dto\VideoDto.class
 org\academiadecodigo\rhashtafaris\kakathon\converters\UserToUserDto.class
 org\academiadecodigo\rhashtafaris\kakathon\exceptions\SurvivorException.class
+org\academiadecodigo\rhashtafaris\kakathon\exceptions\GlobalExceptionHandler.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Video.class
 org\academiadecodigo\rhashtafaris\kakathon\services\UserServiceImpl.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\model\AbstractModel.class
@@ -32,4 +34,5 @@ org\academiadecodigo\rhashtafaris\kakathon\controllers\TestController.class
 org\academiadecodigo\rhashtafaris\kakathon\services\VideoService.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\GenericJpaDao.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\model\User.class
+org\academiadecodigo\rhashtafaris\kakathon\controllers\LessonController.class
 org\academiadecodigo\rhashtafaris\kakathon\errors\ErrorMessage.class

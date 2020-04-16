@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     text-align: center;
+    font-family: monospace !important;
 }
 
 .headerContainer {
@@ -154,6 +155,10 @@ input .birthDate {
     header h1 {
         width: 100%;
     }
+
+    #badge .img-fluid {
+        max-width: 20% !important;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -177,4 +182,46 @@ input .birthDate {
     .signUp {
         margin: 20px 0 10px 0;
     }
+
+    #badge .img-fluid {
+        max-width: 20% !important;
+    }
+}
+
+
+/*----------------------------------------------------------
+    User Page
+-----------------------------------------------------------*/
+
+#map-container {
+    padding: 5rem 0;
+}
+
+#badge {
+    text-align: center;
+}
+
+#badge .img-fluid {
+    max-width: 50% !important;
+}
+
+#badge button {
+    margin: 10px;
+}
+
+#badge .btn {
+    width: 100% !important;
+}
+
+#tip {
+    padding: 3rem 1rem;
+}
+
+/*----------------------------------------------------------
+    Videos Page
+-----------------------------------------------------------*/
+
+
+#video {
+    margin-bottom: 2rem;
 }
