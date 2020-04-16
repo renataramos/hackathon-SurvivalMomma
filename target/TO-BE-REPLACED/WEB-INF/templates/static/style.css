@@ -9,28 +9,60 @@ body {
     min-height: 100vh;
 }
 
+.mommaImage {
+    object-fit: contain;
+    height: 40%;
+    width: 30%;
+}
+
 header {
     align-items: center;
     background-color: rgba(43, 105, 61, 0.562);
     display: flex !important;
     width: 60%;
+    flex-wrap: wrap;
     justify-content: center;
+    padding: 50px;
 }
 
 header h1 {
+    text-shadow: 5px 2px 9px #383838;
     color: #f5f5f5;
     font-family: monospace;
-    font-weight: bold;
-    font-size: 35px;
+    font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 0.3em;
-    line-height: 2;
+    line-height: 1.5;
+    margin: 0;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.desc {
+    color: #383838;
+    font-family: monospace;
+    font-size: 16px;
+    margin: 0;
     width: 70%;
+}
+
+.aboutMomma {
+    color: #383838;
+    font-family: monospace;
+    font-size: 14px;
+    margin: auto;
+    line-height: 1.5;
 }
 
 .formContainer {
     align-items: center;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 40%;
 }
 
@@ -103,6 +135,11 @@ input .birthDate {
     font-family: monospace;
 }
 
+.logo {
+    height: 100px;
+    margin-top: 50px;
+}
+
 /* SIGN UP */
 
 .personTypeContainer {
@@ -120,6 +157,11 @@ input .birthDate {
     width: auto;
 }
 
+footer {
+    background-color: rgba(43, 105, 61, 0.562);
+    padding: 20px 0;
+}
+
 /* INITIAL PAGE */
 
 #header {
@@ -133,7 +175,7 @@ input .birthDate {
     }
 
     header {
-        height: 50vh;
+        height: auto;
         width: 100%;
         margin-bottom: 30px;
     }
@@ -141,7 +183,12 @@ input .birthDate {
     header h1 {
         font-size: 30px;
         line-height: 1.5;
-        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    .mommaImage,
+    .desc {
+        margin-bottom: 50px;
     }
 
     .formContainer {
@@ -149,11 +196,19 @@ input .birthDate {
         width: 100%;
         margin-bottom: 30px;
     }
+
+    .wrapper {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 540px) {
     header h1 {
         width: 100%;
+    }
+
+    .mommaImage {
+        width: 50%;
     }
 
     #badge .img-fluid {
