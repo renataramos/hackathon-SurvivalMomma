@@ -1,6 +1,6 @@
 package org.academiadecodigo.rhashtafaris.kakathon.persistence.dao.jpa;
 
-import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.User;
+import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Client;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -9,16 +9,16 @@ import javax.persistence.criteria.Root;
 
 
 @Repository
-public class JpaUserDao extends GenericJpaDao<User>  {
+public class JpaUserDao extends GenericJpaDao<Client>  {
 
     public JpaUserDao() {
-        super(User.class);
+        super(Client.class);
     }
 
-    public User findByEmail(String email){
+    public Client findByEmail(String email){
         CriteriaBuilder builder = em.getCriteriaBuilder();
-        CriteriaQuery<User> query = builder.createQuery(User.class);
-        Root<User> root = query.from(User.class);
+        CriteriaQuery<Client> query = builder.createQuery(Client.class);
+        Root<Client> root = query.from(Client.class);
 
         query.select(root).where(builder.like(root.get("id"), "%email%"));
 

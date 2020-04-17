@@ -8,7 +8,7 @@ import org.academiadecodigo.rhashtafaris.kakathon.dto.UserDto;
 import org.academiadecodigo.rhashtafaris.kakathon.dto.VideoDto;
 import org.academiadecodigo.rhashtafaris.kakathon.exceptions.UserNotFoundException;
 import org.academiadecodigo.rhashtafaris.kakathon.exceptions.VideoNotFoundException;
-import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.User;
+import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Client;
 import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Video;
 import org.academiadecodigo.rhashtafaris.kakathon.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +59,7 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET, path = "/{id}")
     public String showUser(@PathVariable Integer id, Model model) throws UserNotFoundException {
 
-        User user = userService.get(id);
+        Client user = userService.get(id);
 
         model.addAttribute("user", userToUserDto.convert(user));
 
@@ -69,7 +69,7 @@ public class UserController {
     @GetMapping("/{id}/submit-video")
     public String showFormToSubmitVideos(@PathVariable Integer id, Model model) throws UserNotFoundException{
 
-        User user = userService.get(id);
+        Client user = userService.get(id);
 
         UserDto userDto = userToUserDto.convert(user);
         VideoDto videoDto = videoToDto.convert(new Video());
@@ -89,7 +89,7 @@ public class UserController {
 
         Video video = dtoToVideo.convert(videoDto);
 
-        User user = userService.get(id);
+        Client user = userService.get(id);
         user.setRanking(user.getRanking() + POINTS_FOR_POSTING_VIDEO);
 
         userService.addVideo(id, video);

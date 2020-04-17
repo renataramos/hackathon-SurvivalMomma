@@ -4,13 +4,12 @@ import org.academiadecodigo.rhashtafaris.kakathon.exceptions.UserNotFoundExcepti
 import org.academiadecodigo.rhashtafaris.kakathon.exceptions.VideoNotFoundException;
 import org.academiadecodigo.rhashtafaris.kakathon.persistence.dao.jpa.JpaUserDao;
 import org.academiadecodigo.rhashtafaris.kakathon.persistence.dao.jpa.JpaVideoDao;
-import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.User;
+import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Client;
 import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Video;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -31,9 +30,9 @@ public class UserServiceImpl implements UserService {
 
     @Transactional (readOnly = true)
     @Override
-    public User get(Integer id) throws UserNotFoundException {
+    public Client get(Integer id) throws UserNotFoundException {
 
-        User user = userDao.findById(id);
+        Client user = userDao.findById(id);
 
         if (user == null) {
             throw new UserNotFoundException();
@@ -44,9 +43,9 @@ public class UserServiceImpl implements UserService {
 
     @Transactional (readOnly = true)
     @Override
-    public User get(String email) throws UserNotFoundException{
+    public Client get(String email) throws UserNotFoundException{
 
-        User user = userDao.findByEmail(email);
+        Client user = userDao.findByEmail(email);
 
         if (user == null) {
             throw new UserNotFoundException();
@@ -57,7 +56,7 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public User save(User user) {
+    public Client save(Client user) {
         return userDao.saveOrUpdate(user);
     }
 
@@ -65,7 +64,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(Integer id) throws UserNotFoundException {
 
-        User user = userDao.findById(id);
+        Client user = userDao.findById(id);
 
         if (user == null) {
             throw new UserNotFoundException();
@@ -77,7 +76,7 @@ public class UserServiceImpl implements UserService {
 
     @Transactional (readOnly = true)
     @Override
-    public List<User> listUsers() {
+    public List<Client> listUsers() {
         return userDao.findAll();
     }
 
@@ -100,7 +99,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Video addVideo(Integer id, Video video) throws UserNotFoundException, VideoNotFoundException {
 
-        User user = userDao.findById(id);
+        Client user = userDao.findById(id);
 
         if (user == null) {
             throw new UserNotFoundException();
@@ -117,7 +116,7 @@ public class UserServiceImpl implements UserService {
     public void removeVideo(Integer id, Integer videoId) throws VideoNotFoundException, UserNotFoundException {
 
         Video video = videoDao.findById(videoId);
-        User user = userDao.findById(id);
+        Client user = userDao.findById(id);
 
         if (video == null){
             throw new VideoNotFoundException();

@@ -11,7 +11,7 @@ public class Video extends AbstractModel {
     private String path;
 
     @ManyToOne
-    private User user;
+    private Client client;
 
     public String getPath() {
         return path;
@@ -21,11 +21,11 @@ public class Video extends AbstractModel {
         this.path = path;
     }
 
-    public User getUser() {
-        return user;
+    public Client getUser() {
+        return client;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(Client user) {
+        this.client = user;
     }
 }

@@ -1,14 +1,14 @@
 package org.academiadecodigo.rhashtafaris.kakathon.converters;
 
 import org.academiadecodigo.rhashtafaris.kakathon.dto.UserDto;
-import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.User;
+import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Client;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserToUserDto extends AbstractConverter<User, UserDto> {
+public class UserToUserDto extends AbstractConverter<Client, UserDto> {
 
     @Override
-    public UserDto convert(User user) {
+    public UserDto convert(Client user) {
 
         UserDto userDto = new UserDto();
         userDto.setId(user.getId());

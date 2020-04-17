@@ -2,22 +2,22 @@ package org.academiadecodigo.rhashtafaris.kakathon.services;
 
 import org.academiadecodigo.rhashtafaris.kakathon.exceptions.UserNotFoundException;
 import org.academiadecodigo.rhashtafaris.kakathon.exceptions.VideoNotFoundException;
-import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.User;
+import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Client;
 import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Video;
 
 import java.util.List;
 
 public interface UserService {
 
-    User get(Integer id) throws UserNotFoundException;
+    Client get(Integer id) throws UserNotFoundException;
 
-    User get(String email) throws UserNotFoundException;
+    Client get(String email) throws UserNotFoundException;
 
-    User save(User user);
+    Client save(Client user);
 
     void delete(Integer id)  throws UserNotFoundException;
 
-    List<User> listUsers();
+    List<Client> listUsers();
 
     Video addVideo(Integer id, Video video) throws UserNotFoundException, VideoNotFoundException;
 

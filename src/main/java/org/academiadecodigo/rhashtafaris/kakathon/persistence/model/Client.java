@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
-public class User extends AbstractModel {
+@Table(name = "client")
+public class Client extends AbstractModel {
 
     private String firstName;
     private String lastName;
@@ -19,7 +19,7 @@ public class User extends AbstractModel {
     @OneToMany(
             cascade = {CascadeType.ALL},
             orphanRemoval = true,
-            mappedBy = "user"
+            mappedBy = "client"
     )
     private List<Video> videos = new ArrayList<>();
 

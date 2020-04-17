@@ -1,6 +1,6 @@
 package org.academiadecodigo.rhashtafaris.kakathon.dto;
 
-import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.User;
+import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Client;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -11,7 +11,7 @@ public class VideoDto {
 
     @NotNull(message = "User is mandatory")
     @NotBlank(message = "User is mandatory")
-    private User user;
+    private Client user;
 
     @NotNull(message = "Path is mandatory")
     @NotBlank(message = "Path is mandatory")
@@ -25,11 +25,11 @@ public class VideoDto {
         this.id = id;
     }
 
-    public User getUser() {
+    public Client getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Client user) {
         this.user = user;
     }
 

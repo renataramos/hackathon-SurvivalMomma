@@ -4,11 +4,10 @@ import org.academiadecodigo.rhashtafaris.kakathon.converters.UserDtoToUser;
 import org.academiadecodigo.rhashtafaris.kakathon.converters.UserToUserDto;
 import org.academiadecodigo.rhashtafaris.kakathon.dto.UserDto;
 import org.academiadecodigo.rhashtafaris.kakathon.exceptions.UserNotFoundException;
-import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.User;
+import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Client;
 import org.academiadecodigo.rhashtafaris.kakathon.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,7 +46,7 @@ public class MainController {
     @RequestMapping("/signup")
     public ModelAndView signUp () {
 
-        UserDto userDto = userToUserDto.convert(new User());
+        UserDto userDto = userToUserDto.convert(new Client());
 
         return new ModelAndView("signup", "userDto", userDto);
     }
@@ -59,7 +58,7 @@ public class MainController {
             return "signup";
         }
 
-        User user = userDtoToUser.convert(userDto);
+        Client user = userDtoToUser.convert(userDto);
 
         userService.save(user);
 

@@ -6,7 +6,7 @@ import org.academiadecodigo.rhashtafaris.kakathon.converters.UserToUserDto;
 import org.academiadecodigo.rhashtafaris.kakathon.dto.LessonDto;
 import org.academiadecodigo.rhashtafaris.kakathon.dto.UserDto;
 import org.academiadecodigo.rhashtafaris.kakathon.exceptions.UserNotFoundException;
-import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.User;
+import org.academiadecodigo.rhashtafaris.kakathon.persistence.model.Client;
 import org.academiadecodigo.rhashtafaris.kakathon.services.LessonService;
 import org.academiadecodigo.rhashtafaris.kakathon.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -93,7 +93,7 @@ public class LessonController {
     @PostMapping("/quiz")
     public String addQuizzResult(@ModelAttribute UserDto userDto) throws UserNotFoundException{
 
-        User user = userDtoToUser.convert(userDto);
+        Client user = userDtoToUser.convert(userDto);
 
         //user.setRanking(user.getRanking() + POINTS_FOR_WINNING_QUIZZ);
 
