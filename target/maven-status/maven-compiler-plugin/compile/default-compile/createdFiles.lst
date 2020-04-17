@@ -18,6 +18,7 @@ org\academiadecodigo\rhashtafaris\kakathon\dto\LessonDto.class
 org\academiadecodigo\rhashtafaris\kakathon\Main.class
 org\academiadecodigo\rhashtafaris\kakathon\controllers\MainController.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Challenge.class
+org\academiadecodigo\rhashtafaris\kakathon\persistence\model\Client.class
 org\academiadecodigo\rhashtafaris\kakathon\services\LessonService.class
 org\academiadecodigo\rhashtafaris\kakathon\exceptions\UserNotFoundException.class
 org\academiadecodigo\rhashtafaris\kakathon\converters\UserDtoToUser.class
@@ -33,6 +34,5 @@ org\academiadecodigo\rhashtafaris\kakathon\persistence\model\AbstractModel.class
 org\academiadecodigo\rhashtafaris\kakathon\controllers\TestController.class
 org\academiadecodigo\rhashtafaris\kakathon\services\VideoService.class
 org\academiadecodigo\rhashtafaris\kakathon\persistence\dao\jpa\GenericJpaDao.class
-org\academiadecodigo\rhashtafaris\kakathon\persistence\model\User.class
 org\academiadecodigo\rhashtafaris\kakathon\controllers\LessonController.class
 org\academiadecodigo\rhashtafaris\kakathon\errors\ErrorMessage.class
