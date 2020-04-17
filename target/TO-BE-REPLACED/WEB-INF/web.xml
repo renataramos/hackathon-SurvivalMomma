@@ -4,7 +4,7 @@
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <display-name>TO-BE-REPLACED</display-name>
+    <display-name>SURVIVAL MOMMA</display-name>
 
     <servlet>
         <servlet-name>dispatcherServlet</servlet-name>
@@ -20,10 +20,10 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
-    <context-param>
+    <!--<context-param>
         <param-name>spring.profiles.active</param-name>
         <param-value>heroku</param-value>
-    </context-param>
+    </context-param>-->
 
     <filter>
         <filter-name>encodingFilter</filter-name>
