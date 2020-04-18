@@ -58,7 +58,7 @@ Clone this project and run the command `mvn tomcat7:deploy` ont the project's di
 
 ## Client
 
-Open http://localhost:8080/cheezier on the browser.
+Open http://localhost:8080/survivalmomma on the browser.
 
 ## Authors
 
