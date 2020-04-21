@@ -1,6 +1,6 @@
 ## Survival Momma
 
-This project was developed by a team of five people in a 24-hour hackathon project @ <Academia de Código_>'s #40_rHASHtafaris, taking place at the 14th week of learning.
+This project was developed by a team of five people in a 24-hour hackathon project @ <Academia de Código_>'s #40_rHASHtafaris, taking place at the 14th week of learning. This project ended up winning this competition, and its promotional video can be seen in the following link: https://vimeo.com/408791663 (password: survivalmomma) 
 
 ## The Idea
 
